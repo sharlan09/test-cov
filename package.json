@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "codecov": "./scripts/test-coverage.sh"
+    "codecov": "./scripts/test-coverage.sh",
+    "coveralls": "react-scripts test --coverage --watchAll=false && coveralls < coverage/lcov.info"
   },
   "eslintConfig": {
     "extends": [
@@ -37,10 +38,17 @@
     ]
   },
   "jest": {
-    "coverageReporters": ["clover", "json", "lcov"],
+    "coverageReporters": [
+      "clover",
+      "json",
+      "lcov"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!<rootDir>/node_modules/"
     ]
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.1"
   }
 }

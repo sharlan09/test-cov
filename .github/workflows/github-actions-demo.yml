@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-on: [push]
+on: ["push", "pull_request"]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -11,3 +11,7 @@ jobs:
     - run: npm install
     - run: npm test -- --coverage --watchAll=false
     - run: npm run codecov
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
