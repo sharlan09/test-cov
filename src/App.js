@@ -22,7 +22,9 @@ function App() {
   );
 }
 
-export function sayHi() {
+export function sayHi(formal) {
+  if (formal) return 'hello';
+  
   return 'Hi';
 }
 
