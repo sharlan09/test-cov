@@ -38,4 +38,12 @@ export function sayBye(formal) {
   return 'Hi';
 }
 
+export function sure(formal) {
+  if (formal){ 
+    return 'hello'
+  };
+
+  return 'Hi';
+}
+
 export default App;
