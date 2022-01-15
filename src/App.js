@@ -22,4 +22,8 @@ function App() {
   );
 }
 
+export function sayHi() {
+  return 'Hi';
+}
+
 export default App;
