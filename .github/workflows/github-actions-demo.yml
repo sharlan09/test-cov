@@ -11,7 +11,6 @@ jobs:
     - run: npm install
     - run: npm test -- --coverage --watchAll=false
     - run: npm run codecov
-   - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.COVERALLS_TOKEN }}
