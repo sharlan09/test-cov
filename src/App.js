@@ -23,8 +23,10 @@ function App() {
 }
 
 export function sayHi(formal) {
-  if (formal) return 'hello';
-  
+  if (formal){ 
+    return 'hello'
+  };
+
   return 'Hi';
 }
 
