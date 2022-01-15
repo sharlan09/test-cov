@@ -30,4 +30,12 @@ export function sayHi(formal) {
   return 'Hi';
 }
 
+export function sayBye(formal) {
+  if (formal){ 
+    return 'hello'
+  };
+
+  return 'Hi';
+}
+
 export default App;
