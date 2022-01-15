@@ -10,4 +10,4 @@ jobs:
         node-version: '16'
     - run: npm install
     - run: npm test -- --coverage --watchAll=false
-    - run: npm codecov
+    - run: npm run codecov
