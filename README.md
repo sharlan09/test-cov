@@ -1,3 +1,6 @@
+# CodeCov Badge
+[![codecov](https://codecov.io/gh/sharlan09/test-cov/branch/main/graph/badge.svg?token=ZVDGTTOHOR)](https://codecov.io/gh/sharlan09/test-cov)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
