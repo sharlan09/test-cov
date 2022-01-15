@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import App, {sayHi } from './App';
+import App, {sayHi, sayBye } from './App';
 
 test('renders learn react link', () => {
   render(<App />);
@@ -9,5 +9,11 @@ test('renders learn react link', () => {
 
 test('say Hi says hi by default', () => {
   const result = sayHi();
+  expect(result).toEqual('Hi');
+})
+
+
+test('say Hi says hi by default', () => {
+  const result = sayBye();
   expect(result).toEqual('Hi');
 })
