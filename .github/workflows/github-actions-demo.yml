@@ -1,17 +1,25 @@
-name: GitHub Actions Demo
+name: GitHub Coveralls Demo
 on: ["push", "pull_request"]
+
 jobs:
-  Explore-GitHub-Actions:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
+
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v2
       with:
-        node-version: '16'
-    - run: npm install
-    - run: npm test -- --coverage --watchAll=false
-    - run: npm run codecov
-    - name: Coveralls
+        node-version: 16.x
+
+    - name: npm install, npm run test:coverage
+      run: |
+        npm install
+        npm test -- --coverage --watchAll=false
+    - name: Coveralls Action
       uses: coverallsapp/github-action@master
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
