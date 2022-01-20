@@ -22,4 +22,6 @@ function App() {
   );
 }
 
+export const sayHelloLoud = () => 'Hello!';
+
 export default App;
